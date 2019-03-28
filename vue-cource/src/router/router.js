@@ -32,6 +32,7 @@ export default [{
   //嵌套路由
   {
     path: '/parent',
+    name:'parent',
     component: () => import('@/views/parent'),
     children: [{
       path: 'child',
