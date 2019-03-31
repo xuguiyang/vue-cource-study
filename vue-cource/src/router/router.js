@@ -13,7 +13,18 @@ export default [{
     component: Home,
     props: route => ({
       food: route.query.food
-    })
+    }),
+    //路由独享守卫
+  beforeEnter: (to, from, next) => {
+      if(from.name==='about') alert('这是从about页面来的')
+      else alert('这不是从about也来的')
+      next()
+    }
+  },
+  {
+    path:'/login',
+    name:'login',
+    component:()=>import('../views/login.vue'),
   },
   {
     path: '/about',
@@ -32,7 +43,7 @@ export default [{
   // 动态路由
   {
     path: '/argu/:name',
-    component: () => import('@/views/argu.vue'),
+    component: () => import('@/views/argu'),
     props: true
 
   },
@@ -74,5 +85,14 @@ export default [{
       return '/'
     }
   },
+  {
+    //优先级原则 所以此组件要定义在最后
+    //匹配任何路径
+    path: '*',
+    component: () => import(
+      '@/views/error-404.vue'
+    ),
+    props:true,
 
+  },
 ]
