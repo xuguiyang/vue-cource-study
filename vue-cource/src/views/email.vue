@@ -1,29 +1,18 @@
 <template>
-    <div>
-    email:44444
-    </div>
+  <div>email:44444</div>
 </template>
 
 <script>
 export default {
+  name: "component_name",
 
-  name: 'component_name',
-
-
-  data () {
-    return {
-
-    };
+  data() {
+    return {};
   },
 
-  methods: {
-
-  }
-
-
+  methods: {}
 };
 </script>
 
 <style scoped>
-
 </style>

@@ -1,17 +1,19 @@
 //路由列表
-
 import Home from '@/views/Home'
 // import About from '@/views/About'
-import child from "../views/child.vue"
-import email from "../views/email.vue"
-import tel from "../views/tel.vue"
-
+// import child from "../views/child.vue"
+// import email from "../views/email.vue"
+// import tel from "../views/tel.vue"
 //向外导出
+
 export default [{
     path: '/',
     name: 'home',
-    alias:'/home_page',
-    component: Home
+    alias: '/home_page',
+    component: Home,
+    props: route => ({
+      food: route.query.food
+    })
   },
   {
     path: '/about',
@@ -23,16 +25,21 @@ export default [{
     component: () => import( /* webpackChunkName: "about" */ '@/views/About.vue'),
     //不用webpack懒加载这样写 并且需要在上方import导入模块
     // component:About
+    props: {
+      food: 'banana'
+    }
   },
   // 动态路由
   {
     path: '/argu/:name',
-    component: () => import('@/views/argu.vue')
+    component: () => import('@/views/argu.vue'),
+    props: true
+
   },
   //嵌套路由
   {
     path: '/parent',
-    name:'parent',
+    name: 'parent',
     component: () => import('@/views/parent'),
     children: [{
       path: 'child',
@@ -54,12 +61,12 @@ export default [{
   },
   //重定向
   {
-    path:'/main',
+    path: '/main',
     // redirect:'/'
     // redirect:{
     //   name:'home'
     // }
-    redirect:to=>{
+    redirect: to => {
       // console.log(to);
       // return{
       //   name:'home'

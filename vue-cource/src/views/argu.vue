@@ -1,11 +1,18 @@
 <template>
-    <div>
-        {{$route.params.name}}
-
-    </div>
+  <div>
+    <!-- {{$route.params.name}} -->
+    {{name}}
+  </div>
 </template>
 <script>
-    export default{
-
-    }
+export default {
+  //
+  props: {
+    name: {
+      //可以是string 或number
+      type: String,
+      default: "daxia"
+    },
+  }
+};
 </script>
