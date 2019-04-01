@@ -30,6 +30,29 @@ export default {
       type: String,
       default: "apple"
     }
-  }
+  },
+  //渲染该组件对应路由被确认前调用
+  beforeRouteEnter(to, from, next) {
+    // console.log(to.name);
+    //next() 相当于出发路由  vm为组件的实例
+    next(vm => {
+      // console.log(vm);
+    });
+  },
+  //路由即将离开页面时调用的方法
+  // 常用于用户在页面编辑但是没有保存就要离开是 可以提醒用户保存在离开
+  beforeRouteLeave(to, from, next) {
+    // console.log(this);
+
+    const leave = confirm("您确定要离开吗");
+    //如果离开 跳转  如果不离开不采取操作
+    if (leave) next();
+    else next(false);
+  },
+  // //路由发生变化组件别复用时调用
+  // berforeRouteupdated(to, from, next) {
+  //   console.log(to.name,from.name);
+
+  // }
 };
 </script>
