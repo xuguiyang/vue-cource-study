@@ -14,9 +14,12 @@ export default {
       default: "daxia"
     }
   },
-  //路由发生变化组件别复用时调用
+  //在当前路由改变，但是该组件被复用时调用
+  // 可以访问组件实例 `this`
   beforeRouteUpdate(to, from, next) {
+    // console.log('beforeRouteUpdate')
     // console.log(this);
+    // console.log(to);
 
     console.log(to.name, from.name);
     // next();

@@ -15,16 +15,16 @@ export default [{
       food: route.query.food
     }),
     //路由独享守卫
-  beforeEnter: (to, from, next) => {
-      if(from.name==='about') alert('这是从about页面来的')
-      else alert('这不是从about也来的')
+    beforeEnter: (to, from, next) => {
+      // if (from.name === 'about') alert('这是从about页面来的')
+      // else alert('这不是从about也来的')
       next()
     }
   },
   {
-    path:'/login',
-    name:'login',
-    component:()=>import('../views/login.vue'),
+    path: '/login',
+    name: 'login',
+    component: () => import('../views/login.vue'),
   },
   {
     path: '/about',
@@ -38,7 +38,10 @@ export default [{
     // component:About
     props: {
       food: 'banana'
-    }
+    },
+    meta: { 
+      title:'关于'
+     }
   },
   // 动态路由
   {
@@ -92,7 +95,7 @@ export default [{
     component: () => import(
       '@/views/error-404.vue'
     ),
-    props:true,
+    props: true,
 
   },
 ]
