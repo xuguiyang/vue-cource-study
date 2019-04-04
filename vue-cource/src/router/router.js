@@ -39,7 +39,7 @@ export default [{
     props: {
       food: 'banana'
     },
-    meta: { 
+    meta: {
       title:'关于'
      }
   },
@@ -87,6 +87,10 @@ export default [{
       // }
       return '/'
     }
+  },
+  {
+    path:'/store',
+    component:()=>import('../views/store.vue')
   },
   {
     //优先级原则 所以此组件要定义在最后
