@@ -40,8 +40,8 @@ export default [{
       food: 'banana'
     },
     meta: {
-      title: '关于'
-    }
+      title:'关于'
+     }
   },
   // 动态路由
   {
@@ -89,8 +89,8 @@ export default [{
     }
   },
   {
-    path: '/store',
-    component: () => import('@/views/store.vue')
+    path:'/store',
+    component:()=>import('../views/store.vue')
   },
   {
     //优先级原则 所以此组件要定义在最后
