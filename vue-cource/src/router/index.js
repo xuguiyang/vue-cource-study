@@ -2,7 +2,9 @@ import Vue from 'vue'
 import Router from 'vue-router'
 // import {routes} from " ./router";
 import routes from './router.js'
-import { setTitle } from '@/lib/util'
+import {
+  setTitle
+} from '@/lib/util'
 
 
 Vue.use(Router)
@@ -53,7 +55,7 @@ router.afterEach((to, from) => {
   //longing=false
 })
 
-/*********************************************************** 
+/***********************************************************
  * 导航接续流程
  * 1.导航被触发
  * 2.在失活的组件（即将离开的页面组件）里面调用离开守卫 beforeRouteLeave
