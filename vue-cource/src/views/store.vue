@@ -28,7 +28,7 @@ export default {
   computed: {
     ...mapState({
       appName: state=>state.appName,
-      userName: state=>state.user.userName
+      userName: state=>state.userName
     })
     // //获取根状态下的state.js定义的
     // appName(){
