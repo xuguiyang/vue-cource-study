@@ -8,7 +8,7 @@ import user from './module/uesr'
 
 
 Vue.use(Vuex)
-
+//创建实例
 export default new Vuex.Store({
   state: state,
   mutations:mutations,
