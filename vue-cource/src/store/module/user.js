@@ -1,5 +1,6 @@
 const state= {
-
+  //
+  userName:'大美女'
 }
 
 const mutations={

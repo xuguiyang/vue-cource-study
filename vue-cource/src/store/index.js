@@ -3,12 +3,12 @@ import Vuex from 'vuex'
 import state from './state'
 import mutations from './mutations'
 import actions from './actions'
-import user from './module/uesr'
+import user from './module/user'
 
 
 
 Vue.use(Vuex)
-
+//创建vuex实例
 export default new Vuex.Store({
   state: state,
   mutations:mutations,
