@@ -16,6 +16,7 @@ module.exports = {
 //方便开发的配置
   chainWebpack: config => {
     config.resolve.alias
+
       //@代表src这个目录
       .set('@', resolve('src'))
       .set('_c', resolve('src/component'))
