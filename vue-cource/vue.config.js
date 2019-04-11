@@ -26,7 +26,7 @@ module.exports = {
   //满足跨域需求 使用devserver
   devServer:{
     //需要代理的url 告诉开发环境将任何位置请求就是没有匹配到静态文件的环境进行跨域
-    proxy:'http://localhost:4000'
+    // proxy:'http://localhost:4000'
   }
 
 }
