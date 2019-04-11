@@ -13,7 +13,6 @@ export default {
       default: ""
     }
   },
-
   methods: {
     handleInput(event) {
       const value = event.target.value;
