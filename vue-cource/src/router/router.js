@@ -26,6 +26,11 @@ export default [{
     name: 'login',
     component: () => import('../views/login.vue'),
   },
+  // {
+  //   path: '/directive',
+  //   name: 'directive',
+  //   component: () => import('../views/directive.vue'),
+  // },
   {
     path: '/about',
     name: 'about',
@@ -88,9 +93,38 @@ export default [{
       return '/'
     }
   },
+  // {
+  //   path:'/render_page',
+  //   name:'render_page',
+  //   component:()=>import('../views/render-page.vue')
+  // },
+  // {
+  //   path:'/crontab_list',
+  //   name:'crontab_list',
+  //   component:()=>import('../views/crontab-list.vue')
+  // },
+  // {
+  //   path:'/tables',
+  //   name:'tables',
+  //   component:()=>import('../views/tables.vue')
+  // },
+  {
+    path: '/count-to',
+    name: 'count_to',
+    meta: {
+      title: 'count_to'
+    },
+    component: () => import('../views/count-to.vue')
+  },
   {
     path:'/store',
+    name: 'store',
     component:()=>import('../views/store.vue')
+  },
+  {
+    path:'/render_page',
+    name:'render_page',
+    component:()=>import('../views/render-page.vue')
   },
   {
     //优先级原则 所以此组件要定义在最后
