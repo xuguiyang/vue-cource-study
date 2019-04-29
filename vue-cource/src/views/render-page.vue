@@ -1,6 +1,6 @@
 <template>
   <div>
-   <AInput></AInput>
+    <AInput></AInput>
   </div>
 </template>
     </div>

@@ -19,7 +19,7 @@ module.exports = {
 
       //@代表src这个目录
       .set('@', resolve('src'))
-      .set('_c', resolve('src/component'))
+      .set('_c', resolve('src/components'))
       // .set('pages',resolve(''))
   },
   //打包时不生成。map文件  提高打包速度

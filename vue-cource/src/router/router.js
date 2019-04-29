@@ -114,7 +114,7 @@ export default [{
     meta: {
       title: 'count_to'
     },
-    component: () => import('../views/count-to.vue')
+    component: () => import('@/views/count-to.vue')
   },
   {
     path:'/store',

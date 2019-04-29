@@ -5,7 +5,7 @@
     <!-- {{inputValue}} -->
     AShow:
     <a-show :content="inputValue"></a-show>
-    <p> appName：{{appName}}</p>
+    <p>appName：{{appName}}</p>
     <p>userName： {{userName}}</p>
   </div>
 </template>
@@ -13,7 +13,7 @@
 <script>
 import AInput from "../components/AInput";
 import AShow from "../components/AShow";
-import { mapState} from 'vuex'
+import { mapState } from "vuex";
 export default {
   name: "store",
   data() {
@@ -27,8 +27,8 @@ export default {
   },
   computed: {
     ...mapState({
-      appName: state=>state.appName,
-      userName: state=>state.userName
+      appName: state => state.appName,
+      userName: state => state.userName
     })
     // //获取根状态下的state.js定义的
     // appName(){
