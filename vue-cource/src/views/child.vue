@@ -1,7 +1,7 @@
 <template>
     <div>
     我是子集路由
-    i am child 
+    i am child  i am child 
     </div>
 </template>
 
