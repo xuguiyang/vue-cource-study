@@ -23,54 +23,47 @@ Vue.use(iview)
 //   event.stopPropagation()
 // }
 
-// let list = [{name: 'lison'}, {name: 'lili'}]
-// const getLiEleArr = (h) => {
-//   return list.map((item, index) => h('li', {
-//     on: {
-//       'click': handleClick
-//     },
-//     key: `list_item_${index}`
-//   }, item.name))
-// }
 
 new Vue({
   router,
   store,
-  render: h => {
-    return h('div',[
-       h(CountTo, {
-        'class': [],
-        attrs: {},
-        style: {
-          'font-size': '40px',
-        },
-        props: {
-          endVal: 100
-        },
-        // domProps: {
-        //   innerHTML: '123'
-        // },
-        on: {
-          'on-animation-end': (val) => {
-            console.log('animation end!')
-          },
-          'click': () => {
-            console.log(click)
-          }
-        },
-        nativeOn: {
-          'click': () => {
-            console.log('nativeOn click!')
-          }
-        },
-        directives: [],
-        scopedSlots: {},
-        slot: '',
-        key: '',
-        ref: ''
-      })
-    ])
-  }
+  // render: h => {
+  //   return h('div',[
+  //      h(CountTo, {
+  //       'class': [],
+  //       attrs: {},
+  //       style: {
+  //         'font-size': '40px',
+  //       },
+  //       props: {
+  //         endVal: 100
+  //       },
+  //       // domProps: {
+  //       //   innerHTML: '123'
+  //       // },
+  //       on: {
+  //         'on-animation-end': (val) => {
+  //           console.log('animation end!')
+  //         },
+  //         'click': () => {
+  //           console.log(click)
+  //         }
+  //       },
+  //       nativeOn: {
+  //         'click': () => {
+  //           console.log('nativeOn click!')
+  //         }
+  //       },
+  //       directives: [],
+  //       scopedSlots: {},
+  //       slot: '',
+  //       key: '',
+  //       ref: ''
+  //     })
+  //   ])
+  // }
+
+
   // render: h => h('div', [
   //   h('ul', {
   //     on: {
@@ -78,5 +71,7 @@ new Vue({
   //     }
   //   }, getLiEleArr(h))
   // ])
-  // render: h => h(App)
+
+  
+  render: h => h(App)
 }).$mount('#app')
