@@ -28,7 +28,7 @@ export default {
   props: {
     food: {
       type: String,
-      default: "apple"
+      default: "apple,banana"
     }
   },
   //渲染该组件对应路由被确认前调用
