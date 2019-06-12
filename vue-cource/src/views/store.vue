@@ -1,7 +1,6 @@
 <template>
   <div>
     <a-input @input="handleInput"></a-input>
-    <AInput></AInput>
     <!-- <a-input v-model="inputValue"></a-input> -->
     <!-- {{inputValue}} -->
     AShow:
