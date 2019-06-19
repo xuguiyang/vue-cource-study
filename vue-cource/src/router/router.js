@@ -48,6 +48,23 @@ export default [{
       title:'关于'
      }
   },
+  // {
+  //   path: '/modalbox',
+  //   name: 'modalbox',
+  //   // route level code-splitting
+  //   // this generates a separate chunk (about.[hash].js) for this route
+  //   // which is lazy-loaded when the route is visited.
+  //   // 路由懒加载中我们要用到异步组件浏览器中看到懒加载的效果了，即只有当路由匹配成功时，才会加载相应的组件，而且加载一次后会将它缓存，下次再访问这个路由，不会重新加载。
+  //   component: () => import( /* webpackChunkName: "about" */ '@/views/Modalbox.vue'),
+  //   //不用webpack懒加载这样写 并且需要在上方import导入模块
+  //   // component:About
+  //   // props: {
+  //   //   food: 'banana'
+  //   // },
+  //   meta: {
+  //     title:'模态框'
+  //    }
+  // },
   // 动态路由
   {
     path: '/argu/:name',
@@ -93,11 +110,11 @@ export default [{
       return '/'
     }
   },
-  // {
-  //   path:'/render_page',
-  //   name:'render_page',
-  //   component:()=>import('../views/render-page.vue')
-  // },
+  {
+    path:'/render_page',
+    name:'render_page',
+    component:()=>import('../views/render-page.vue')
+  },
   // {
   //   path:'/crontab_list',
   //   name:'crontab_list',

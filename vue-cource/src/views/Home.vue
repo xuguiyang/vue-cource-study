@@ -6,6 +6,7 @@
     <button @click="handclick('go')">下一页</button>
     <button @click="handclick('push')">上一页</button>
     <button @click="handclick('replace')">替换</button>
+    <button>弹框</button>
   </div>
 </template>
 

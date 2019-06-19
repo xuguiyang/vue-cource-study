@@ -4,7 +4,8 @@
       <!-- <router-link to="/">Home</router-link> | -->
       <router-link :to="{name:'home'}">Home</router-link>|
       <!-- <router-link to="/about">About</router-link> -->
-      <router-link :to="{name:'about'}">About</router-link>
+      <router-link :to="{name:'about'}">About</router-link>|
+      <router-link :to="{name:'store'}">store</router-link>
     </div>
     <transition-group name="router">
       <router-view key="default"/>
