@@ -14,12 +14,12 @@
     <div class="DetailsTags" @click="showCustomPopupClick">
         <button class="Detailscenter">优惠券</button>
     </div >
-    <Coupon ref="CustomPopupRef">
+    <Maskp ref="CustomPopupRef">
         <div slot="content" class="contentView">
             <div class="ServiceNoteTitle">优惠券详情</div>
             <button @click="closerButton" class="closeButton">X</button>
         </div>
-    </Coupon>
+    </Maskp>
   </div>
 </template>
 
@@ -27,7 +27,7 @@
 import AInput from "../components/AInput";
 import AShow from "../components/AShow";
 // import VDialog from "../components/VDialog";
-import Coupon from "../components/Coupon";
+import Maskp from "../components/Maskp";
 import { mapState } from "vuex";
 export default {
   name: "store",
@@ -40,7 +40,7 @@ export default {
     AInput,
     AShow,
     // VDialog,
-    Coupon
+    Maskp
   },
   computed: {
     ...mapState({
@@ -82,13 +82,13 @@ body{
   top: 50%;
   transform: translate(-50%, -50%);
 }
-.coupon{
+/* .coupon{
   width: 100px;
   height: 200px;
   position: fixed;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-}
+} */
 </style>
 
