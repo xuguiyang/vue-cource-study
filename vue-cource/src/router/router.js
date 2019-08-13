@@ -67,6 +67,13 @@ export default [{
   // },
   // 动态路由
   {
+    path: '/game',
+    name: 'game',
+    component: () => import('@/views/game'),
+    props: true
+
+  },
+  {
     path: '/argu/:name',
     component: () => import('@/views/argu'),
     props: true
@@ -115,6 +122,7 @@ export default [{
     name:'render_page',
     component:()=>import('../views/render-page.vue')
   },
+ 
   // {
   //   path:'/crontab_list',
   //   name:'crontab_list',
