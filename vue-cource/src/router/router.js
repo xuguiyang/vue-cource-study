@@ -122,7 +122,12 @@ export default [{
     name:'render_page',
     component:()=>import('../views/render-page.vue')
   },
- 
+  {
+    path:'/shopcar',
+    name:'shopcar',
+    component:()=>import('../views/shopcar.vue')
+  },
+
   // {
   //   path:'/crontab_list',
   //   name:'crontab_list',

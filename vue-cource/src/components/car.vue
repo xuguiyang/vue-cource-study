@@ -1,7 +1,8 @@
 <template>
   <div class="ys-float-btn" :style="{'width':itemWidth+'px','height':itemHeight+'px','left':left+'px','top':top+'px'}"
        ref="div"
-       @click ="onBtnClicked">
+
+       >
     <p>{{text}}</p>
   </div>
 </template>
@@ -36,10 +37,10 @@
       this.clientHeight = document.documentElement.clientHeight;
       this.left = this.clientWidth - this.itemWidth - this.gapWidth;
       this.top = this.clientHeight*this.coefficientHeight;
-      //  console.log('clientWidth',clientWidth)
-      // console.log('clientHeight',clientHeight)
-      // console.log('left',left)
-      // console.log('top',top)
+      //  console.log('clientWidth',this.clientWidth)
+      // console.log('clientHeight',this.clientHeight)
+      // console.log('left',this.left)
+      // console.log('top',this.top)
     },
     mounted(){
       window.addEventListener('scroll', this.handleScrollStart);
@@ -59,6 +60,18 @@
           div.style.transition = 'all 0.3s';
            if(this.left>this.clientWidth/2){
              this.left = this.clientWidth - this.itemWidth - this.gapWidth;
+
+             if(this.top <0) {
+               this.top = 0
+             }
+             if(this.top > this.clientHeight -this.itemHeight){this.top = this.clientHeight-this.itemHeight;}
+            //  if(this.top > this.clientHeight -this.itemHeight){this.top = this.clientHeight*this.coefficientHeight;}
+            //  console.log('this.left',this.left)
+
+            //  console.log('this.clientWidth',this.clientWidth)
+             console.log('this.clientHeight',this.clientHeight)
+             console.log('this.top',this.top)
+             console.log('this.gapWidth',this.gapWidth)
            }else{
              this.left = this.gapWidth;
            }
@@ -70,32 +83,32 @@
       window.removeEventListener('scroll', this.handleScrollStart);
     },
     methods:{
-      onBtnClicked(){
-        this.$emit("onFloatBtnClicked");
-      },
-      handleScrollStart(){
-        this.timer&&clearTimeout(this.timer);
-        this.timer = setTimeout(()=>{
-          this.handleScrollEnd();
-        },300);
-        this.currentTop = document.documentElement.scrollTop || document.body.scrollTop;
-        if(this.left>this.clientWidth/2){
-          this.left = this.clientWidth - this.itemWidth/2;
-        }else{
-          this.left = -this.itemWidth/2;
-        }
-      },
-      handleScrollEnd(){
-        let scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-        if(scrollTop === this.currentTop){
-          if(this.left>this.clientWidth/2){
-            this.left = this.clientWidth - this.itemWidth - this.gapWidth;
-          }else{
-            this.left = this.gapWidth;
-          }
-          clearTimeout(this.timer);
-        }
-      }
+      // onBtnClicked(){
+      //   this.$emit("onFloatBtnClicked");
+      // },
+      // handleScrollStart(){
+      //   this.timer&&clearTimeout(this.timer);
+      //   this.timer = setTimeout(()=>{
+      //     this.handleScrollEnd();
+      //   },300);
+      //   this.currentTop = document.documentElement.scrollTop || document.body.scrollTop;
+      //   if(this.left>this.clientWidth/2){
+      //     this.left = this.clientWidth - this.itemWidth/2;
+      //   }else{
+      //     this.left = -this.itemWidth/2;
+      //   }
+      // },
+      // handleScrollEnd(){
+      //   let scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+      //   if(scrollTop === this.currentTop){
+      //     if(this.left>this.clientWidth/2){
+      //       this.left = this.clientWidth - this.itemWidth - this.gapWidth;
+      //     }else{
+      //       this.left = this.gapWidth;
+      //     }
+      //     clearTimeout(this.timer);
+      //   }
+      // }
     },
     data(){
       return{
