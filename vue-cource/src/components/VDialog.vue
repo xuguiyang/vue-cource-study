@@ -15,7 +15,7 @@
 export default {
     name: 'VDialog',
     props: {
-      
+
     },
     data() {
         return {
