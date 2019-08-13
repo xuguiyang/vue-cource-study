@@ -7,17 +7,20 @@
     <button @click="handclick('push')">上一页</button>
     <button @click="handclick('replace')">替换</button>
     <button>弹框</button>
+    <car></car>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
 import HelloWorld from "@/components/HelloWorld.vue";
+import car from "../components/car.vue"
 
 export default {
   name: "home",
   components: {
-    HelloWorld
+    HelloWorld,
+    car
   },
   methods: {
     handclick(type) {
