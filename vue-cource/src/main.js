@@ -4,6 +4,9 @@ import router from './router'
 import store from './store'
 // import Bus from './lib/bus'
 import iview from 'iview'
+import VueClipboard from "vue-clipboard2";
+import VueScroller from 'vue-scroller'
+Vue.use(VueScroller )
 import 'iview/dist/styles/iview.css'
 import CountTo from '_c/count-to'
 // import '@/assets/font/iconfont.js'
@@ -22,6 +25,7 @@ Vue.use(iview)
 //   console.log(event)
 //   event.stopPropagation()
 // }
+Vue.use(VueClipboard);
 
 
 new Vue({
@@ -72,6 +76,6 @@ new Vue({
   //   }, getLiEleArr(h))
   // ])
 
-  
+
   render: h => h(App)
 }).$mount('#app')

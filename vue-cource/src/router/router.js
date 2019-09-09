@@ -123,9 +123,19 @@ export default [{
     component:()=>import('../views/render-page.vue')
   },
   {
+    path:'/scroll',
+    name:'scroll',
+    component:()=>import('../views/scroll.vue')
+  },
+  {
     path:'/shopcar',
     name:'shopcar',
     component:()=>import('../views/shopcar.vue')
+  },
+  {
+    path:'/fuzhi',
+    name:'fuzhi',
+    component:()=>import('../views/fuzhi.vue')
   },
 
   // {
